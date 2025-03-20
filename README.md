@@ -7,7 +7,7 @@ Utilizamos esse código para cadastrar no banco de dados
 php artisan db:seed 
 ------------------------------------------------------------------------------------------------------------------
 
-# Criei a pasta admin (video ep 6)
+# Criei a pasta admin (video aula 6)
  dentro dela criei o arquivo dashboard.blade.php
 -------------------------------------------------------------------------------------------------------------------
 # Comando no terminal
@@ -29,6 +29,10 @@ Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->middleware
     {
         return view('admin/dashboard');
     }
+---------------------------------------------------
+# Criar um Middleware (video aula 7)
 
-
-
+php artisan make:middleware Admin
+ 
+Serve para controlar a sessão de acordo com o nível
+Verifica se o usuário está logado
